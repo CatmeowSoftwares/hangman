@@ -2,7 +2,7 @@ use std::{fs::{self, read_to_string}, io,};
 use rand::*;
 fn main() {
     let mut words = Vec::<String>::new();
-    for line in read_to_string("words.txt").unwrap().lines(){
+    for line in include_str!("../words.txt").lines() {
         words.push(line.to_string());
     }
     let mut used_letters = Vec::<char>::new();
